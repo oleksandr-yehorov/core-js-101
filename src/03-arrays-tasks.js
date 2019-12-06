@@ -55,7 +55,7 @@ function generateOdds(len) {
  *    [] => []
  */
 function doubleArray(/* arr */) {
-  throw new Error('Not implemented');
+  return arr.concat(arr);
 }
 
 
@@ -71,7 +71,7 @@ function doubleArray(/* arr */) {
  *    [] => []
  */
 function getArrayOfPositives(/* arr */) {
-  throw new Error('Not implemented');
+  return arr.filter((item) => item > 0);
 }
 
 /**
