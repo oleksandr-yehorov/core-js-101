@@ -21,7 +21,13 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-  //return arr[value];
+  for (var i=0; i<arr.length; i++) {
+  	if (arr[i] === value) {
+    	return i;
+    }
+    }
+        
+  return '-1';
 }
 
 /**
