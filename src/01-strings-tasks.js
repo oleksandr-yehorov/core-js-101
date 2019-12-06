@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* *******************************************************************************************
  *                                                                                           *
  * Plese read the following tutorial before implementing tasks:                              *
@@ -297,4 +298,5 @@ module.exports = {
   encodeToRot13,
   isString,
   getCardId,
+// eslint-disable-next-line eol-last
 };

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* ********************************************************************************************
  *                                                                                            *
  * Plese read the following tutorial before implementing tasks:                               *
@@ -16,6 +17,7 @@
  * @return {number}
  *
  * @example
+ *
  *    ['Ace', 10, true], 10    => 1
  *    ['Array', 'Number', 'string'], 'Date'    => -1
  *    [0, 1, 2, 3, 4, 5], 5    => 5
