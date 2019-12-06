@@ -21,13 +21,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-  for (var i=0; i<arr.length; i++) {
-  	if (arr[i] === value) {
-    	return i;
-    }
-    }
-        
-  return '-1';
+  return arr.indexOf(value);
 }
 
 /**
@@ -42,13 +36,9 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-  var arr = [];
-  var k=1;
-  for (var i=0; i<len; i++) {
-    arr[i] = k;
-    k = k + 2;
-  };
-  return arr;
+  return new Array(len)
+  .fill()
+  .map((value, index) => index * 2 + 1);
 }
 
 
