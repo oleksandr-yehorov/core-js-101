@@ -1,7 +1,6 @@
-/* eslint-disable linebreak-style */
 /* *******************************************************************************************
  *                                                                                           *
- * Please read the following tutorial before implementing tasks:                              *
+ * Plese read the following tutorial before implementing tasks:                              *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String   *
  *                                                                                           *
  ******************************************************************************************* */
@@ -253,7 +252,7 @@ function isString(value = false) {
 /**
  * Returns playid card id.
  *
- * Playing cards initial deck includes the cards in the following order:
+ * Playing cards inittial deck inclides the cards in the following order:
  *
  *  'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
  *  'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
@@ -298,5 +297,4 @@ module.exports = {
   encodeToRot13,
   isString,
   getCardId,
-// eslint-disable-next-line eol-last
 };
