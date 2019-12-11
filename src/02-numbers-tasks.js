@@ -1,9 +1,6 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable space-infix-ops */
-/* eslint-disable linebreak-style */
 /* *******************************************************************************************
  *                                                                                           *
- * Please read the following tutorial before implementing tasks:                              *
+ * Plese read the following tutorial before implementing tasks:                              *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
@@ -12,7 +9,7 @@
 
 
 /**
- * Returns an area of a rectangle given by width and height.
+ * Returns an area of a rectangle given by width and heigth.
  *
  * @param {numder} width
  * @param {number} height
@@ -38,7 +35,7 @@ function getRectangleArea(width, height) {
  *   3.14 => 19.729201864543903
  *   0    => 0
  */
-function getCircleCircumference(radius) {
+function getCicleCircumference(radius) {
   return 2 * Math.PI * radius;
 }
 
@@ -55,11 +52,11 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  return value1/2 + value2/2;
+  return value1 / 2 + value2 / 2;
 }
 
 /**
- * Returns a distance between two points by cartesian coordinates.
+ * Returns a distance beetween two points by cartesian coordinates.
  *
  * @param {number} x1
  * @param {number} y1
@@ -90,7 +87,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-  return -( b / a );
+  return -(b / a);
 }
 
 
@@ -112,8 +109,11 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  *   (0,1) (1,2)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const magnitudeU = Math.sqrt(x1 ** 2 + y1 ** 2);
+  const magnitudeV = Math.sqrt(x2 ** 2 + y2 ** 2);
+  const dotProduct = x1 * x2 + y1 * y2;
+  return Math.acos(dotProduct / (magnitudeU * magnitudeV));
 }
 
 /**
@@ -212,7 +212,7 @@ function isPrime(n) {
 }
 
 /**
- * Tries to convert value to number and returns it if conversion was successful;
+ * Tries to convert value to number and returns it if conversion was successfull;
  * otherwise returns default value passed as a second argument.
  *
  * @param {any} value
@@ -232,7 +232,7 @@ function toNumber(value, def) {
 
 module.exports = {
   getRectangleArea,
-  getCircleCircumference,
+  getCicleCircumference,
   getAverage,
   getDistanceBetweenPoints,
   getLinearEquationRoot,
