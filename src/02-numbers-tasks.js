@@ -1,6 +1,6 @@
 /* *******************************************************************************************
  *                                                                                           *
- * Plese read the following tutorial before implementing tasks:                              *
+ * Please read the following tutorial before implementing tasks:                              *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
@@ -9,7 +9,7 @@
 
 
 /**
- * Returns an area of a rectangle given by width and heigth.
+ * Returns an area of a rectangle given by width and height.
  *
  * @param {numder} width
  * @param {number} height
@@ -56,7 +56,7 @@ function getAverage(value1, value2) {
 }
 
 /**
- * Returns a distance beetween two points by cartesian coordinates.
+ * Returns a distance between two points by cartesian coordinates.
  *
  * @param {number} x1
  * @param {number} y1
@@ -212,7 +212,7 @@ function isPrime(n) {
 }
 
 /**
- * Tries to convert value to number and returns it if conversion was successfull;
+ * Tries to convert value to number and returns it if conversion was successful;
  * otherwise returns default value passed as a second argument.
  *
  * @param {any} value

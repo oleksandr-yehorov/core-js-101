@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  *                                                                                                *
- * Plese read the following tutorial before implementing tasks:                                   *
+ * Please read the following tutorial before implementing tasks:                                   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling  *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration              *
  *                                                                                                *
@@ -325,9 +325,9 @@ function toNaryString(/* num, n */) {
 
 
 /**
- * Returns the commom directory path for specified array of full filenames.
+ * Returns the common directory path for specified array of full filenames.
  *
- * @param {array} pathes
+ * @param {array} paths
  * @return {string}
  *
  * @example:
