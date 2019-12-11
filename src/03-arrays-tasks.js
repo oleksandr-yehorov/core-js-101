@@ -1,10 +1,9 @@
-/* eslint-disable linebreak-style */
 /* ********************************************************************************************
  *                                                                                            *
- * Please read the following tutorial before implementing tasks:                               *
+ * Plese read the following tutorial before implementing tasks:                               *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array     *
  *                                                                                            *
- * NOTE : Please do not use loops! All tasks can be implemented using standard Array methods  *
+ * NOTE : Please do not use loops! All tasks can be implmeneted using standard Array methods  *
  *                                                                                            *
  ******************************************************************************************** */
 
@@ -17,7 +16,6 @@
  * @return {number}
  *
  * @example
- *
  *    ['Ace', 10, true], 10    => 1
  *    ['Array', 'Number', 'string'], 'Date'    => -1
  *    [0, 1, 2, 3, 4, 5], 5    => 5
@@ -184,7 +182,7 @@ function getTail(arr, n) {
 
 
 /**
- * Returns CSV representation of two-dimensional numeric array.
+ * Returns CSV represebtation of two-dimentional numeric array.
  * https://en.wikipedia.org/wiki/Comma-separated_values
  *
  * @param {array} arr
@@ -371,7 +369,7 @@ function getFalsyValuesCount(arr) {
 }
 
 /**
- * Returns a number of all occurrences of the specified item in an array
+ * Returns a number of all occurences of the specified item in an array
  *
  * @param {array} arr
  * @param {any} item
@@ -389,7 +387,7 @@ function findAllOccurences(arr, item) {
 }
 
 /**
- * Concatenates all elements from specified array into single string with ',' delimiter
+ * Concatenates all elements from specified array into single string with ',' delimeter
  *
  * @param {array} arr
  * @return {string}
