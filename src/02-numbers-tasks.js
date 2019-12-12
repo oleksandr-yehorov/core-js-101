@@ -3,7 +3,7 @@
 /* eslint-disable linebreak-style */
 /* *******************************************************************************************
  *                                                                                           *
- * Please read the following tutorial before implementing tasks:                              *
+ * Plese read the following tutorial before implementing tasks:                              *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
@@ -12,7 +12,7 @@
 
 
 /**
- * Returns an area of a rectangle given by width and height.
+ * Returns an area of a rectangle given by width and heigth.
  *
  * @param {numder} width
  * @param {number} height
@@ -38,7 +38,7 @@ function getRectangleArea(width, height) {
  *   3.14 => 19.729201864543903
  *   0    => 0
  */
-function getCircleCircumference(radius) {
+function getCicleCircumference(radius) {
   return 2 * Math.PI * radius;
 }
 
@@ -59,7 +59,7 @@ function getAverage(value1, value2) {
 }
 
 /**
- * Returns a distance between two points by cartesian coordinates.
+ * Returns a distance beetween two points by cartesian coordinates.
  *
  * @param {number} x1
  * @param {number} y1
@@ -212,7 +212,7 @@ function isPrime(n) {
 }
 
 /**
- * Tries to convert value to number and returns it if conversion was successful;
+ * Tries to convert value to number and returns it if conversion was successfull;
  * otherwise returns default value passed as a second argument.
  *
  * @param {any} value
@@ -232,7 +232,7 @@ function toNumber(value, def) {
 
 module.exports = {
   getRectangleArea,
-  getCircleCircumference,
+  getCicleCircumference,
   getAverage,
   getDistanceBetweenPoints,
   getLinearEquationRoot,
