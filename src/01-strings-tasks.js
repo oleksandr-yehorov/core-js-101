@@ -1,6 +1,6 @@
 /* *******************************************************************************************
  *                                                                                           *
- * Plese read the following tutorial before implementing tasks:                              *
+ * Please read the following tutorial before implementing tasks:                              *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String   *
  *                                                                                           *
  ******************************************************************************************* */
@@ -66,7 +66,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  return value.slice(7, value.length - 1);
+  return value.slice(7, -1);
 }
 
 
@@ -96,7 +96,7 @@ function getFirstChar(value) {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 function removeLeadingAndTrailingWhitespaces(value) {
-  return value.replace(/^\s+|\s+$|^\t+|\t+$/g, '');
+  return value.trim();
 }
 
 /**
@@ -111,11 +111,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(value, count) {
-  let res = value;
-  for (let i = 0; i < count - 1; i += 1) {
-    res += value;
-  }
-  return res;
+  return value.repeat(count);
 }
 
 /**
@@ -146,7 +142,7 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-  return str.replace(/<|>/g, '');
+  return str.slice(1, -1);
 }
 
 
@@ -207,21 +203,8 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  let top = '┌┐\n';
-  let bottom = '└┘\n';
-
-  if (width > 2) {
-    top = `┌${repeatString('─', width - 2)}┐\n`;
-    bottom = `└${repeatString('─', width - 2)}┘\n`;
-  }
-
-  let center = '';
-
-  if (height > 2) {
-    center = repeatString(`│${repeatString(' ', width - 2)}│\n`, height - 2);
-  }
-
-  return top + center + bottom;
+  const middle = `│${' '.repeat(width - 2)}│\n`;
+  return `┌${'─'.repeat(width - 2)}┐\n${middle.repeat(height - 2)}└${'─'.repeat(width - 2)}┘\n`;
 }
 
 
@@ -242,14 +225,11 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ';
-  const newAlphabet = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ';
-  const lastChar = /!|\?/g.exec(str) || '';
-  const strArr = str.split('');
-  for (let i = 0; i < strArr.length; i += 1) {
-    strArr[i] = newAlphabet[alphabet.indexOf(strArr[i])];
-  }
-  return strArr.join('') + lastChar;
+  return str.replace(/\w/g, (character) => {
+    const code = character.charCodeAt();
+    return (code >= 65 && code <= 77) || (code >= 97 && code <= 109)
+      ? String.fromCharCode(code + 13) : String.fromCharCode(code - 13);
+  });
 }
 
 /**
@@ -265,15 +245,14 @@ function encodeToRot13(str) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(value) {
-  return value instanceof String || typeof value === 'string';
+function isString(value = false) {
+  return typeof value === 'string' || value instanceof String;
 }
-
 
 /**
  * Returns playid card id.
  *
- * Playing cards inittial deck inclides the cards in the following order:
+ * Playing cards initial deck includes the cards in the following order:
  *
  *  'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
  *  'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
@@ -295,11 +274,10 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  const cardArr = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣',
-    'J♣', 'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦',
-    'Q♦', 'K♦', 'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥',
-    'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
-  return cardArr.indexOf(value);
+  const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  const suits = ['♣', '♦', '♥', '♠'];
+
+  return ranks.indexOf(value.slice(0, -1)) + suits.indexOf(value.slice(-1)) * 13;
 }
 
 
