@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable linebreak-style */
 /* *******************************************************************************************
  *                                                                                           *
@@ -80,7 +81,7 @@ function getRegexForPitSpot() {
  *   'Pa55'.match(validator) => false
  */
 function getPasswordValidator(/* minLength */) {
-  throw new Error('Not implemented');
+  return new RegExp(`^((?=\\w*[a-z])(?=\\w*[A-Z])(?=\\w*[0-9])[a-zA-Z0-9]{${minLength},})$`);
 }
 
 
