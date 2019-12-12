@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* *************************************************************************************************
  *                                                                                                *
- * Please read the following tutorial before implementing tasks:                                   *
+ * Plese read the following tutorial before implementing tasks:                                   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling  *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration              *
  *                                                                                                *
@@ -326,9 +326,9 @@ function toNaryString(/* num, n */) {
 
 
 /**
- * Returns the common directory path for specified array of full filenames.
+ * Returns the commom directory path for specified array of full filenames.
  *
- * @param {array} paths
+ * @param {array} pathes
  * @return {string}
  *
  * @example:

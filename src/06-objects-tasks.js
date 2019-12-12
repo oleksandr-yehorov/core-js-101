@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* ************************************************************************************************
  *                                                                                                *
- * Please read the following tutorial before implementing tasks:                                   *
+ * Plese read the following tutorial before implementing tasks:                                   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object        *
  *                                                                                                *
@@ -9,7 +9,7 @@
 
 
 /**
- * Returns the rectangle object with width and height parameters and getArea() method
+ * Returns the rectagle object with width and height parameters and getArea() method
  *
  * @param {number} width
  * @param {number} height
@@ -67,11 +67,11 @@ function fromJSON(/* proto, json */) {
  *              \----/\----/\----------/
  *              Can be several occurences
  *
- * All types of selectors can be combined using the combinations ' ','+','~','>' .
+ * All types of selectors can be combined using the combinators ' ','+','~','>' .
  *
  * The task is to design a single class, independent classes or classes hierarchy
  * and implement the functionality to build the css selectors using the provided cssSelectorBuilder.
- * Each selector should have the stringify() method to output the string representation
+ * Each selector should have the stringify() method to output the string repsentation
  * according to css specification.
  *
  * Provided cssSelectorBuilder should be used as facade only to create your own classes,
@@ -136,7 +136,7 @@ const cssSelectorBuilder = {
     throw new Error('Not implemented');
   },
 
-  combine(/* selector1, combination, selector2 */) {
+  combine(/* selector1, combinator, selector2 */) {
     throw new Error('Not implemented');
   },
 };
